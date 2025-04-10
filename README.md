@@ -1,197 +1,106 @@
-# Arabic Football Commentary System
+# EchoPlay AI 🎙️⚽
 
-A comprehensive system for generating real-time Arabic football commentary using computer vision and AI.
+**Smart Commentary System for the Visually Impaired**
 
-## Overview
+EchoPlay AI is an intelligent, real-time sports commentary system powered by generative AI, tailored specifically for visually impaired individuals. It transforms live or recorded football matches into immersive auditory experiences through real-time audio descriptions of in-game events.
 
-This system combines state-of-the-art computer vision and natural language processing to create an engaging Arabic football commentary experience. It uses:
+---
 
-- **YOLOv12m** for ball and player detection
-- **Supervision** for player tracking
-- **OSNet** for player re-identification
-- **TimeSformer** for football event recognition
-- **Arabic Template System** for commentary generation
-- **Arabic TTS** for speech synthesis
+## 📌 Problem
 
-## System Architecture
+Visually impaired audiences lack access to rich, descriptive sports commentary that translates the visual experience into sound. Current solutions do not provide detailed, real-time descriptions of player positions, goals, and match dynamics.
 
-![System Architecture Diagram](./docs/system_architecture.png)
+---
 
-## Features
+## ✅ Our Solution
 
-- Real-time player and ball tracking
-- Player identification with Arabic name pronunciation
-- Football event detection (goals, passes, tackles, etc.)
-- Culturally appropriate Arabic commentary generation
-- Authentic Arabic speech synthesis with emotion
-- Game state analysis (score, possession, field zone)
-- Video visualization with overlays
+EchoPlay AI leverages computer vision and natural language generation to:
+- Analyze football match videos
+- Identify players, passes, goals, and other events
+- Generate real-time, Arabic-language audio commentary
+- Describe player locations and actions accurately
 
-## Installation
+---
 
-### Prerequisites
+## 💡 Idea Summary
 
-- Python 3.8+
-- CUDA-capable GPU (recommended)
-- FFmpeg for video processing
+An AI-powered system that processes sports video feeds and generates real-time descriptive commentary. Designed to support Arabic language output and visually impaired accessibility.
 
-### Setup
+---
 
-1. Clone the repository:
-```bash
-git clone https://github.com/username/arabic-football-commentary.git
-cd arabic-football-commentary
-```
+## 🛠️ Tech Stack
 
-2. Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+### Short-Term Technologies:
+- **Qwen2.5-VL-32B-Instruct** – Vision-language understanding
+- **YOLO / DF-DETR** – Player & object detection
+- **ByteTrack / DeepSort** – Multi-object tracking (MOT)
+- **ResNet50 / OsNet** – Player re-identification
+- **Qwen 2.5 Omni 7B** – Language model for commentary
+- **qTTS** – Text-to-speech engine (Arabic)
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+### Medium-Term Vision:
+- **Full Ecosystem** – Integrate open-source TTS with voice cloning
+- **Action Recognition** – For deeper understanding of gameplay
+- **End-to-End ML Design** – For scalable deployment and modularity
 
-4. Download pre-trained models:
-```bash
-python download_models.py
-```
+---
 
-## Usage
+## 🧪 Testing & Evaluation
 
-### Basic Usage
+- Trained and tested **YOLOv11l**, **YOLOv12m**, and **RF-DETR** on 600 annotated football images (100 epochs)
+- Evaluated **ByteTrack** and **DeepSort** for MOT
+- Tested **OsNet** and **ResNet** for player identification
+- Deployed **Qwen-VL-32B-Instruct** and **Qwen 2.5 Omni 7B** for scene and text generation
+- Experimented with **qTTS** for real-time Arabic speech output
 
-```bash
-python m.py --video /teamspace/studios/this_studio/project/data/football_video.mp4 --output /teamspace/studios/this_studio/project/output/output_video.mp4
-```
+---
 
-### Options
+## 📂 Data Sources
 
-- `--video`: Path to input video file (required)
-- `--output`: Path to output video file with visualization
-- `--display`: Display video with visualizations in real-time
-- `--no-audio`: Disable audio commentary
+- Football video datasets from **Kaggle**
+- Annotated detection/tracking data from **Roboflow**
 
-### Example
+---
 
-```bash
-python main.py --video samples/match_clip.mp4 --output output/match_with_commentary.mp4 --display
-```
+## 🚧 Challenges & Future Plans
 
-## Data Preparation
+### Key Challenges:
+- Arabic speech synthesis quality
+- Accurate Arabic player identification
 
-### Player Database
+### What We Need:
+- Support in **TTS** and **ML system design**
 
-Create a JSON file with player information in the following format:
+### Roadmap:
+- **Short Term:** Integrate APIs for Vision & Speech (Qwen, TTS)
+- **Medium Term:** Build a full-fledged smart broadcasting ecosystem
 
-```json
-{
-  "player_id1": {
-    "name": "محمد صلاح",
-    "arabic_name": "محمد صلاح",
-    "team": "home",
-    "position": "forward",
-    "number": "10",
-    "stats": {
-      "goals": 24,
-      "assists": 13
-    }
-  },
-  "player_id2": {
-    "name": "كريم بنزيما",
-    "arabic_name": "كريم بنزيما",
-    "team": "away",
-    "position": "forward",
-    "number": "9",
-    "stats": {
-      "goals": 22,
-      "assists": 9
-    }
-  }
-}
-```
+---
 
-### Team Database
+## 🎯 Impact & Use Cases
 
-Create a JSON file with team information:
+- Inclusive AI experiences for the **visually impaired**
+- AI-powered **sports broadcasting**
+- Creative content production in **sports media**
 
-```json
-{
-  "home": {
-    "name": "ليفربول",
-    "arabic_name": "ليفربول",
-    "color": "أحمر",
-    "formation": "4-3-3"
-  },
-  "away": {
-    "name": "ريال مدريد",
-    "arabic_name": "ريال مدريد",
-    "color": "أبيض",
-    "formation": "4-4-2"
-  }
-}
-```
+---
 
-## Custom Configuration
+## 🎥 Demo & Visuals
 
-Edit `config.py` to customize system parameters:
+(Include screenshots, links to video demos, or simulations if available.)
 
-- Detection confidence thresholds
-- Tracking parameters
-- Re-identification settings
-- Event recognition settings
-- TTS voice and emotion settings
+---
 
-## Components
+## 📌 Summary
 
-### 1. Object Detection (YOLOv12m)
+EchoPlay AI is an assistive technology tool that uses cutting-edge AI to transform how visually impaired audiences experience football matches. Early tests on real match scenes are promising. We aim to improve voice quality and player detection in future iterations.
 
-Uses YOLOv12m trained specifically for football scenes to detect players and the ball with high accuracy.
+---
 
-### 2. Object Tracking (Supervision)
+## 🙌 Team Members
 
-Implements Supervision's ByteTrack algorithm to maintain consistent player tracking throughout the video.
+- **Mohamed Abdelaziz**
+- **Mahmoud El-Waleed**
 
-### 3. Player Re-identification (OSNet)
+---
 
-Uses OSNet to generate player embeddings and match them against a database of known players.
-
-### 4. Event Recognition (TimeSformer)
-
-Detects football events like goals, passes, tackles, and fouls using a TimeSformer model trained on football action sequences.
-
-### 5. Game State Analysis
-
-Analyzes the game state including score, possession, field zone, and game phase to provide context for commentary.
-
-### 6. Arabic Commentary Generation
-
-Generates culturally appropriate Arabic football commentary using templates and contextual information.
-
-### 7. Arabic Text-to-Speech
-
-Converts generated Arabic text to natural-sounding speech with appropriate emotion and intonation.
-
-## Extending the System
-
-### Adding New Events
-
-1. Update the `event_classes` dictionary in `config.py`
-2. Add new templates in `data/commentary_templates.json`
-3. Add event handling in `events/game_analyzer.py`
-
-### Adding Custom TTS Voices
-
-1. Place custom voice models in the `models` directory
-2. Update the `model_path` in `config.py`
-
-## Acknowledgements
-
-- YOLOv12m: Ultralytics
-- ByteTrack: ByteTrack authors
-- Supervision: Roboflow
-- OSNet: Kaiyang Zhou et al.
-- TimeSformer: Facebook Research
-- TTS: Mozilla TTS

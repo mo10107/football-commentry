@@ -31,16 +31,11 @@ An AI-powered system that processes sports video feeds and generates real-time d
 ## 🛠️ Tech Stack
 
 ### Short-Term Technologies:
-- **Qwen2.5-VL-32B-Instruct** – Vision-language understanding
-- **YOLO / DF-DETR** – Player & object detection
-- **ByteTrack / DeepSort** – Multi-object tracking (MOT)
-- **ResNet50 / OsNet** – Player re-identification
-- **Qwen 2.5 Omni 7B** – Language model for commentary
+- **Qwen2.5-VL-32B-Instruct** – Vision-language understanding and generate commentary script
 - **qTTS** – Text-to-speech engine (Arabic)
 
 ### Medium-Term Vision:
-- **Full Ecosystem** – Integrate open-source TTS with voice cloning
-- **Action Recognition** – For deeper understanding of gameplay
+- **Full Ecosystem** 
 - **End-to-End ML Design** – For scalable deployment and modularity
 
 ---

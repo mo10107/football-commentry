@@ -1,4 +1,4 @@
-#python main_with_reid.py --video D:\AI_league_compeation\code\drive-download-20250409T013908Z-001\data\football_video.mp4 --output processed_video.mp4  
+#python main_with_reid.py --video \data\football_video.mp4 --output processed_video.mp4  
 # ==============================================================================
 # main_with_reid.py - Updated for Tracklet Re-ID and New Model Option
 # ==============================================================================

@@ -80,11 +80,24 @@ An AI-powered system that processes sports video feeds and generates real-time d
 
 ---
 
-## 🎥 Demo & Visuals
+## 🎥 How to run 
 
-(Include screenshots, links to video demos, or simulations if available.)
+# For Short Term 
+## 1. clone repo
+    ```bash
+   git clone https://github.com/mo10107/football-commentry.git
+   ```
+## 2. Get API Key from Alibaba Cloud (DASHSCOPE_API_KEY)
 
----
+## 3. Run notebook
+
+# For Medium Term
+
+## 1. clone repo
+    ```bash
+   git clone https://github.com/mo10107/football-commentry.git
+   ```
+## 2. python main_with_reid.py --video \data\football_video.mp4 --output processed_video.mp4 
 
 ## 📌 Summary
 

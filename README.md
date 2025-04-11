@@ -84,9 +84,9 @@ An AI-powered system that processes sports video feeds and generates real-time d
 
 # For Short Term 
 ## 1. clone repo
-    ```bash
+```bash
    git clone https://github.com/mo10107/football-commentry.git
-   ```
+```
 ## 2. Get API Key from Alibaba Cloud (DASHSCOPE_API_KEY)
 
 ## 3. Run notebook
@@ -94,9 +94,9 @@ An AI-powered system that processes sports video feeds and generates real-time d
 # For Medium Term
 
 ## 1. clone repo
-    ```bash
+```bash
    git clone https://github.com/mo10107/football-commentry.git
-   ```
+```
 ## 2. python main_with_reid.py --video \data\football_video.mp4 --output processed_video.mp4 
 
 ## 📌 Summary
